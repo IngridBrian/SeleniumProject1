@@ -26,30 +26,46 @@ public class UnderstandingWebelements {
 		loginBtn.click();
 
 		/**
-		 * How to use WebElements
+		 * How to use WebElements -find elements
 		 */
-
+		// add to cart
 		List<WebElement> addToCart = driver.findElements(By.cssSelector(".btn_small.btn_inventory"));
 		int itemNumbers = addToCart.size();
 		System.out.println("Size of List = " + addToCart.size());
-
+//		addToCart.get(2).click();
 		for (int i = 0; i < addToCart.size(); i++) {
 			addToCart.get(i).click();
 		}
 		driver.findElement(By.cssSelector(".shopping_cart_link")).click();
 		List<WebElement> products = driver.findElements(By.cssSelector(".cart_item"));
 		int pNumber = products.size();
-		//Actual, Expected
-		Assert.assertEquals(pNumber, itemNumbers);
-//
-//		driver.findElement(By.cssSelector("#checkout")).click();
-//
-//		driver.findElement(By.cssSelector("#first-name")).sendKeys("Mandy");
-//		driver.findElement(By.id("last-name")).sendKeys("Singh");
-//		driver.findElement(By.cssSelector("#postal-code")).sendKeys("143521");
-//		driver.findElement(By.id("continue")).click();
-//		driver.findElement(By.id("finish")).click();
+		System.out.println("Actual size of cart " + pNumber);
+		// Actual, Expected
 
+		Assert.assertEquals(pNumber, itemNumbers);
+		driver.findElement(By.cssSelector("#checkout")).click();
+		WebElement firstname = driver.findElement(By.cssSelector("#first-name"));
+		firstname.sendKeys("Ingrid");
+		WebElement lastname = driver.findElement(By.id("last-name"));
+		lastname.sendKeys("Rodrigues");
+		WebElement postalcode = driver.findElement(By.cssSelector("#postal-code"));
+		postalcode.sendKeys("143521");
+		driver.findElement(By.id("continue")).click();
+		driver.findElement(By.id("finish")).click();
+		WebElement Text= driver.findElement(By.cssSelector("h2[class='complete-header'] "));
+		System.out.println(Text.getText());
+		WebElement subText= driver.findElement(By.cssSelector("div[class='complete-text']"));
+		System.out.println(subText.getText());
+		WebElement title = driver.findElement(By.cssSelector("span[class='title']"));
+		System.out.println(title.getText());
+		WebElement logo = driver.findElement(By.cssSelector("div[class='app_logo']"));
+		System.out.println(logo.getText());
+		Assert.assertEquals("Thank you for your order!", "Thank you for your order!");
+		WebElement backHome = driver.findElement(By.cssSelector("#back-to-products"));
+		System.out.println(backHome.getText());
+		backHome.click();
+		
+	//	driver.close();
 	}
 
 }
