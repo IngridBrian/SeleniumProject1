@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Assignment2 {
+public class XpathAssignment2 {
 	// books
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -20,6 +20,6 @@ public class Assignment2 {
 		driver.findElement(By.xpath("(//h2[@class='product-title'])[6]/a")).click();
 		System.out.println(driver.findElement(By.xpath("//div[@class='stock']/span[2]")).getText());
 		driver.findElement(By.xpath("//div[@class='email-a-friend']")).click();
-
+		
 	}
 }

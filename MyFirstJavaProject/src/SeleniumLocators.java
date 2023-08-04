@@ -22,6 +22,9 @@ public class SeleniumLocators {
 		driver.findElement(By.id("react-burger-menu-btn")).click();
 		Thread.sleep(2000);
 		// 2sec
+		/*
+		 * if there is hyper link(href) we can use either partial or link Text
+		 */
 		driver.findElement(By.linkText("About")).click();
 		System.out.println("title about is" + driver.getTitle());
 		driver.navigate().back();
@@ -29,10 +32,21 @@ public class SeleniumLocators {
 		driver.findElement(By.id("react-burger-menu-btn")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.partialLinkText("Logo")).click();
+		
+		/**
+		 * getTitle() method is used to get title of page under control of webDRiver
+		 */
 		System.out.println("title logout is " + driver.getTitle());
+		/**
+		 * GetText() method is used to grab text inside any webelement
+		 */
 		String text = driver.findElement(By.className("login_logo")).getText();
 		System.out.println(text);
 		driver.quit();
+		
+		
+	
+		 
 	}
 
 }

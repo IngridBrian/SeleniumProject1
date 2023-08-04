@@ -46,21 +46,31 @@ public class UnderstandingWebelements {
 		driver.findElement(By.cssSelector("#checkout")).click();
 		WebElement firstname = driver.findElement(By.cssSelector("#first-name"));
 		firstname.sendKeys("Ingrid");
+		
 		WebElement lastname = driver.findElement(By.id("last-name"));
 		lastname.sendKeys("Rodrigues");
+		
 		WebElement postalcode = driver.findElement(By.cssSelector("#postal-code"));
 		postalcode.sendKeys("143521");
+		
 		driver.findElement(By.id("continue")).click();
+		
 		driver.findElement(By.id("finish")).click();
+		
 		WebElement Text= driver.findElement(By.cssSelector("h2[class='complete-header'] "));
 		System.out.println(Text.getText());
+		
 		WebElement subText= driver.findElement(By.cssSelector("div[class='complete-text']"));
 		System.out.println(subText.getText());
+		
 		WebElement title = driver.findElement(By.cssSelector("span[class='title']"));
 		System.out.println(title.getText());
+		
 		WebElement logo = driver.findElement(By.cssSelector("div[class='app_logo']"));
 		System.out.println(logo.getText());
+		
 		Assert.assertEquals("Thank you for your order!", "Thank you for your order!");
+		
 		WebElement backHome = driver.findElement(By.cssSelector("#back-to-products"));
 		System.out.println(backHome.getText());
 		backHome.click();

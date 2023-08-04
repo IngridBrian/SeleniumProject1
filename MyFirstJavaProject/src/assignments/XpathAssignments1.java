@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class XpathAssignments1 {
 
 	//computers
-		public static void main(String[] args) throws InterruptedException {
+			public static void main(String[] args) throws InterruptedException {
 			System.setProperty("webdriver.edge.driver",
 					"C:\\Users\\HP\\Desktop\\SeleniumSession2\\driver\\chromeDriver.exe");
 			WebDriver driver = new ChromeDriver();
@@ -28,8 +28,10 @@ public class XpathAssignments1 {
 			WebElement qtyBox = driver.findElement(By.xpath("//*[contains(@id,'addtocart_31_EnteredQuantity')]"));
 			qtyBox.clear();
 			qtyBox.sendKeys("4");
-
+			Thread.sleep(2000);
 			driver.findElement(By.xpath("//*[contains(@id,'add-to-cart-button-31')]")).click();
+			 WebElement text = driver.findElement(By.xpath("//p[@class='content']"));
+//			 System.out.println("text is "+ text.getText());
 		//driver.quit();
 
 	}

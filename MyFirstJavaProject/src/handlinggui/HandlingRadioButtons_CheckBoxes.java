@@ -1,0 +1,41 @@
+package handlinggui;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class HandlingRadioButtons_CheckBoxes {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.edge.driver",
+				"C:\\Users\\HP\\Desktop\\SeleniumSession2\\driver\\chromeDriver.exe");
+
+
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://selenium.obsqurazone.com/check-box-demo.php");
+
+		WebElement checkBox = driver.findElement(By.xpath("//*[@id='gridCheck']"));
+		System.out.println("Is my checkbox selected: " + checkBox.isSelected());
+
+		checkBox.click();
+		System.out.println("Is my checkbox selected: " + checkBox.isSelected());
+
+//		driver.findElement(By.partialLinkText("Radio Buttons")).click();
+//
+//		WebElement radioBtn = driver.findElement(By.id("inlineRadio1"));
+//		System.out.println("Is my RadioBtn selected: " + radioBtn.isSelected());
+//		radioBtn.click();
+//		System.out.println("Is my RadioBtn selected: " + radioBtn.isSelected());
+//
+//		driver.quit();
+
+		
+		
+//		female=str1
+//	    checked= expected
+//	    
+	}
+
+}
