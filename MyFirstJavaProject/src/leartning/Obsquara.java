@@ -28,7 +28,7 @@ public class Obsquara {
 //		Thread.sleep(2000);
 		
 		/*
-		 * checkbox - after clicking still false
+		 * checkbox - after clicking still false- site isue
 		 */
 		driver.findElement(By.xpath("//div[@class='accordion-select']")).click();
 		WebElement checkBox = driver.findElement(By.xpath("//div[@class='accordion-select']/div[2]/label[3]"));

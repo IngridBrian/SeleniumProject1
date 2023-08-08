@@ -38,7 +38,7 @@ public class LearnCssLocators {
 		driver.findElement(By.cssSelector("[class='list'] li:nth-child(5)a")).click();
 		driver.findElement(By.cssSelector("a[title*='3rd Album'] img")).click();
 		
-		
+
 		//a [title*='Show details for Music 2'] 
 		
 	}

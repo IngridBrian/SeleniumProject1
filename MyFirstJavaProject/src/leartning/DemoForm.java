@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class DemoForm {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
 
 		
@@ -28,7 +28,8 @@ public class DemoForm {
 		driver.findElement(By.cssSelector("[id='userNumber']")).sendKeys("798");
 		//sub
 		//driver.findElement(By.cssSelector("[class='subjects-auto-complete__control css-yk16xz-control']")).sendKeys("computer");
-		//driver.findElement(By.xpath("//div[@class='custom-control custom-checkbox custom-control-inline']/input[@id='hobbies-checkbox-1']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//label[@class='custom-control-label'])[5]")).click();
 		//adres
 		driver.findElement(By.xpath("//textarea[@id='currentAddress']")).sendKeys("asf546456");
 		
