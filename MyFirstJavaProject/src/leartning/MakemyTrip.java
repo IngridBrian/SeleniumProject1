@@ -25,8 +25,6 @@ public class MakemyTrip {
 		driver.findElement(By.cssSelector("[class='primaryBtn font24 latoBold widgetSearchBtn '] ")).click();
 		driver.findElement(By.cssSelector("[class='bgProperties icon20 overlayCrossIcon '] ")).click();
 
-
-
 	}
 
 }
